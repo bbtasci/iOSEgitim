@@ -1,5 +1,3 @@
-import UIKit
-
 var numbers = Array(1...1000)                        // creating an array that includes numbers 1,2, ... , 999, 1000
 
 for item in numbers {
@@ -16,9 +14,10 @@ var evenNumbers = numbers.filter({$0 % 2 == 0})      // creating a new array tha
 var oddNumbers = numbers.filter({$0 % 2 == 1})       // creating a new array that contains odd elements in the numbers,
                                                 // divides all elements consequtively by 2 and if 1 remains, adds that element to the new array
 
-var evenSum = 0
-var oddSum = 0
 
+var evenSum = 0, oddSum = 0                          // sum of even numbers and sum of odd numbers, initially 0
+
+/*
 for item1 in numbers {
     if (item1 % 2 == 0){
         evenSum += item1                             // calculate the sum of even numbers in the array
@@ -26,6 +25,12 @@ for item1 in numbers {
     else {
         oddSum += item1                              // calculate the sum of even numbers in the array
     }
+}
+*/
+
+for (item2, item3) in zip(evenNumbers, oddNumbers) {
+    evenSum += item2                                 // addition of elements in the evenNumbers array
+    oddSum += item3                                  // addition of elements in the oddNumbers array
 }
 
 print("Even numbers from 1 to 1000: \(evenNumbers) \n")
