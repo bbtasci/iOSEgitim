@@ -1,2 +1,2 @@
 # iOSEgitim
-Eğitim
+December 15th, 2020
